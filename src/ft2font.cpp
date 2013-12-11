@@ -854,6 +854,8 @@ FT2Font::FT2Font(Py::PythonClassInstance *self, Py::Tuple &args, Py::Dict &kwds)
      * that we'll always be able to print. */
     std::string facefile = Py::String(args[0]).encode("unicode_escape");
 
+    printf("%s\n", facefile.c_str());
+
     args.verify_length(1);
 
     clear(Py::Tuple(0));
